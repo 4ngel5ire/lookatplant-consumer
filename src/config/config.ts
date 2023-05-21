@@ -29,7 +29,7 @@ class ConfigService {
       username: this.getValue('PG_USER'),
       password: this.getValue('PG_PASSWORD'),
       database: this.getValue('PG_DATABASE'),
-      entities: [__dirname + '/../*/*/*.entity.{ts,js}'],
+      entities: [__dirname + '/../*/*/*-entity.{ts,js}'],
       ssl: true,
     };
   }

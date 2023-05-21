@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreatePlantDto } from './dto/create-plant.dto';
 import { UpdatePlantDto } from './dto/update-plant.dto';
-import { Plant } from './entities/plant.entity';
+import { Plant } from './entities/plant-entity';
 
 @Injectable()
 export class PlantService {
