@@ -1,7 +1,7 @@
-import { UserPlant } from 'src/user-plant/entities/user-plant-entity';
+import { UserPlant } from 'src/user-plant/entities/user-plant.entity';
 import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
 import { CreateUserDto } from '../dto/create-user.dto';
-import { Base } from 'src/base-entity';
+import { Base } from 'src/base.entity';
 
 @Entity({ name: 'user' })
 export class User extends Base {

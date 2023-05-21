@@ -1,7 +1,7 @@
 import { UUID, randomUUID } from 'crypto';
-import { Base } from 'src/base-entity';
-import { Plant } from 'src/plant/entities/plant-entity';
-import { User } from 'src/user/entities/user-entity';
+import { Base } from 'src/base.entity';
+import { Plant } from 'src/plant/entities/plant.entity';
+import { User } from 'src/user/entities/user.entity';
 import {
   Column,
   Entity,

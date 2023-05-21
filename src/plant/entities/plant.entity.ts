@@ -1,4 +1,4 @@
-import { Base } from 'src/base-entity';
+import { Base } from 'src/base.entity';
 import { Column, Entity, PrimaryColumn } from 'typeorm';
 import { CreatePlantDto } from '../dto/create-plant.dto';
 

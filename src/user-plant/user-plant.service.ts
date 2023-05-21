@@ -2,10 +2,10 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateUserPlantDto } from './dto/create-user-plant.dto';
 import { UpdateUserPlantDto } from './dto/update-user-plant.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { UserPlant } from './entities/user-plant-entity';
+import { UserPlant } from './entities/user-plant.entity';
 import { Repository } from 'typeorm';
-import { User } from 'src/user/entities/user-entity';
-import { Plant } from 'src/plant/entities/plant-entity';
+import { User } from 'src/user/entities/user.entity';
+import { Plant } from 'src/plant/entities/plant.entity';
 
 @Injectable()
 export class UserPlantService {
