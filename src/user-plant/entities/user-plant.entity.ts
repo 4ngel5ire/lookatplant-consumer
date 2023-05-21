@@ -1,15 +1,8 @@
-import { UUID, randomUUID } from 'crypto';
+import { randomUUID } from 'crypto';
 import { Base } from 'src/base.entity';
 import { Plant } from 'src/plant/entities/plant.entity';
 import { User } from 'src/user/entities/user.entity';
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  ManyToOne,
-  PrimaryColumn,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from 'typeorm';
 import { CreateUserPlantDto } from '../dto/create-user-plant.dto';
 
 @Entity({ name: 'user_plant' })
