@@ -15,6 +15,9 @@ import { UserPlantController } from './user-plant/user-plant.controller';
 import { UserModule } from './user/user.module';
 import { UserPlantModule } from './user-plant/user-plant.module';
 import { PlantModule } from './plant/plant.module';
+import { KafkaModule } from './kafka/kafka.module';
+import { DefaultModule } from './default/default.module';
+import { ConsumerModule } from './consumer/consumer.module';
 
 @Module({
   imports: [
@@ -26,6 +29,9 @@ import { PlantModule } from './plant/plant.module';
     UserModule,
     PlantModule,
     UserPlantModule,
+    KafkaModule.register(configService.getKafkaConfig()),
+    DefaultModule,
+    ConsumerModule,
   ],
   controllers: [UserController, PlantController, UserPlantController],
   providers: [UserService, PlantService, UserPlantService],

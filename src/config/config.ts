@@ -1,4 +1,5 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { KafkaConfig } from 'src/kafka/kafka.message';
 
 require('dotenv').config();
 
@@ -32,6 +33,16 @@ class ConfigService {
       ssl: true,
     };
   }
+
+  public getKafkaConfig(): KafkaConfig {
+    return {
+      brokers: [this.getValue('KAFKA_BROKERS')],
+      groupId: this.getValue('KAFKA_GROUPID'),
+      pass: this.getValue('KAFKA_PASSWORD'),
+      user: this.getValue('KAFKA_USER'),
+      topic: this.getValue('KAFKA_TOPIC'),
+    };
+  }
 }
 
 const configService = new ConfigService(process.env).ensureValues([
@@ -40,6 +51,11 @@ const configService = new ConfigService(process.env).ensureValues([
   'PG_USER',
   'PG_PASSWORD',
   'PG_DATABASE',
+
+  'KAFKA_BROKERS',
+  'KAFKA_GROUPID',
+  'KAFKA_PASSWORD',
+  'KAFKA_USER',
 ]);
 
 export { configService };
